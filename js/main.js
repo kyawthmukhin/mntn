@@ -17,3 +17,5 @@ AOS.init({
       this.classList.add('active');
     });
   });
+
+  

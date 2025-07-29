@@ -80,7 +80,7 @@
     }
 
     .steps #section2 .content {
-        bottom: 190px;
+        bottom: 50px;
     }
 
     .steps .title {
@@ -92,6 +92,57 @@
     }
 
   /* end steps section */
+
+  /* map section */
+
+  .map {
+    padding-bottom: 0;
+  }
+
+  .map .title,
+  .key .title, 
+  .option .title {
+    font-size: 40px;
+  }
+
+  .map .wrapper {
+    height: 80vh;
+    margin-bottom: 0;
+  }
+
+  .map .image-container {
+    margin-top: 70px;
+  }
+
+  .map .image-container img {
+    width: 230px;
+    height: 280px;
+  }
+
+  .map .image-container img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(150px) translateY(100px);
+  }
+  .map .image-container img:nth-child(2) {
+    transform: rotateY(90deg) translateZ(150px);
+  }
+  .map .image-container img:nth-child(3) {
+    transform: rotateY(180deg) translateZ(150px) translateY(100px);
+  }
+  .map .image-container img:nth-child(4) {
+    transform: rotateY(270deg) translateZ(150px);
+  }
+
+  /* key section */
+
+  .video-wrapper {
+    width: 90%;
+    height: 350px !important;
+  }
+
+  /* end key section */
+
+
+  /* end map section */
 
   footer .main-content {
       flex-direction: column-reverse !important;
