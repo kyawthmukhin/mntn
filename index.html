@@ -19,7 +19,7 @@
 </head>
 <body>
     <header id="header">
-        <nav class="navbar-nav">
+        <nav class="navbar-nav" data-aos="fade-down" data-aos-duration="2000">
             <a href="/" class="navbar-brand">
                 MNTN
             </a>
@@ -42,15 +42,17 @@
                     <img src="/images/instagram.png" alt="instagram logo">
                     <img src="/images/twitter.png" alt="twitter logo">
                 </aside>
-                <div class="content">
-                    <span class="line"></span>
-                    <span class="guide">A Hiking guide</span>
-                    <h1 class="title">Be Prepared For The Mountains And Beyond!</h1>
-                    <span>scroll down
-                        <img src="/images/arrow-downward.png" alt="arrow-downward">
-                    </p>
+                <div data-aos="fade-right" data-aos-duration="900">
+                    <div class="content">
+                        <span class="line"></span>
+                        <span class="guide">A Hiking guide</span>
+                        <h1 class="title">Be Prepared For The Mountains And Beyond!</h1>
+                        <span>scroll down
+                            <img src="/images/arrow-downward.png" alt="arrow-downward">
+                        </p>
+                    </div>
                 </div>
-                <div class="vertical-nav">
+                <div class="vertical-nav" data-aos="fade-left" data-aos-duration="1300">
                     <ul>
                         <li class="nav-item"><a href="#start" class="nav-link active">Start</a></li>
                         <li class="nav-item"><a href="#section1" class="nav-link">01</a></li>
@@ -144,46 +146,68 @@
             </p>
             <div>
                 <div class="video-wrapper" id="videoContainer">
-                    <video id="myVideo">
+                    <video id="hikingVideo" muted playsinline>
                         <source src="images/hiking.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
+                    <div class="custom-controls" id="customControls">
+                        <button id="playPauseBtn" aria-label="Play">
+                        <p class="play-icon">▶</p>
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </div>
 
         <div class="option" id="section5">
             <h2 class="title">Options</h2>
-            <div class="option-content">
-                <div>
-                    <img src="images/first-option.png" alt="first-option" class="option-image">
-                    <div class="option1">
-                        <div class="text">
-                            <img src="images/target.png" alt="target" class="icon">
-                            <span>First Option</span>
+                <div class="option-wrapper">
+                    <div class="option-content">
+                    <div>
+                        <img src="images/first-option.png" alt="first-option" class="option-image">
+                        <div class="option1">
+                            <div class="text">
+                                <img src="images/target.png" alt="target" class="icon">
+                                <p><span>First</span> Option</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/second-option.png" alt="second-option" class="option-image2">
+                        <div class="option1">
+                            <div class="text">
+                                <img src="images/@sign.png" alt="" class="icon">
+                                <p><span>Second</span> Option</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/third-option.png" alt="third-option" class="option-image3">
+                        <div class="option1">
+                            <div class="text">
+                                <img src="images/third.png" alt="target" class="icon">
+                                <p><span>Third</span> Option</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="images/second-option.png" alt="second-option" class="option-image2">
-                    <div class="option1">
-                        <div class="text">
-                            <img src="images/@sign.png" alt="" class="icon">
-                            <span>Second Option</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="images/third-option.png" alt="third-option" class="option-image3">
-                    <div class="option1">
-                        <div class="text">
-                            <img src="images/third.png" alt="target" class="icon">
-                            <span>Third Option</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            
+            <div>
+                <swiper-container class="mySwiper" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
+                    navigation="true">
+                    <swiper-slide>Slide 1</swiper-slide>
+                    <swiper-slide>Slide 2</swiper-slide>
+                    <swiper-slide>Slide 3</swiper-slide>
+                    <div class="">
+                        <img src="images/Left Button.svg" alt="previous btn">
+                    </div>
+                    <div class="">
+                        <img src="images/Right Button.svg" alt="next btn">
+
+                    </div>
+                </swiper-container>
+            </div>
 
 
         </div>
@@ -191,46 +215,46 @@
     </main>
 
     <footer>
-    <section class="main-content">
-        <!-- Left: Branding and copyright -->
-        <div class="branding">
-            <div>
-                <a href="/" class="navbar-brand">MNTN</a>
-                <p class="description">
-                    Get out there & discover your next <br> slope, mountain & destination!
-                </p>
+        <section class="main-content">
+            <!-- Left: Branding and copyright -->
+            <div class="branding">
+                <div>
+                    <a href="/" class="navbar-brand">MNTN</a>
+                    <p class="description">
+                        Get out there & discover your next <br> slope, mountain & destination!
+                    </p>
+                </div>
+                <div class="copyright-section">
+                    <p>Copyright 2023 MNTN, Inc. Terms & Privacy</p>
+                </div>
             </div>
-            <div class="copyright-section">
-                <p>Copyright 2023 MNTN, Inc. Terms & Privacy</p>
-            </div>
-        </div>
 
-        <!-- Right: Links -->
-        <div class="content">
-            <div class="blogs">
-                <h2 class="title">More on The Blog</h2>
-                <ul class="blog-links">
-                    <li><a href="#" class="nav-link">About MNTN</a></li>
-                    <li><a href="#" class="nav-link">Contributors & Writers</a></li>
-                    <li><a href="#" class="nav-link">Write For Us</a></li>
-                    <li><a href="#" class="nav-link">Contact Us</a></li>
-                    <li><a href="#" class="nav-link">Privacy Policy</a></li>
-                </ul>
+            <!-- Right: Links -->
+            <div class="content">
+                <div class="blogs">
+                    <h2 class="title">More on The Blog</h2>
+                    <ul class="blog-links">
+                        <li><a href="#" class="nav-link">About MNTN</a></li>
+                        <li><a href="#" class="nav-link">Contributors & Writers</a></li>
+                        <li><a href="#" class="nav-link">Write For Us</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                        <li><a href="#" class="nav-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h2 class="title">More on MNTN</h2>
+                    <ul class="info-links">
+                        <li><a href="#" class="nav-link">The Team</a></li>
+                        <li><a href="#" class="nav-link">Jobs</a></li>
+                        <li><a href="#" class="nav-link">Press</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="info">
-                <h2 class="title">More on MNTN</h2>
-                <ul class="info-links">
-                    <li><a href="#" class="nav-link">The Team</a></li>
-                    <li><a href="#" class="nav-link">Jobs</a></li>
-                    <li><a href="#" class="nav-link">Press</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-</footer>
+        </section>
+    </footer>
 
     
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
 </body>

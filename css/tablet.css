@@ -90,9 +90,14 @@
 
 
     /* footer section */
+
     footer .main-content {
         flex-direction: column-reverse !important;
         row-gap: 50px;
+    }
+
+    footer .branding {
+        height: auto;
     }
 
     footer .content {

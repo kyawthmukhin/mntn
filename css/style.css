@@ -75,7 +75,7 @@ body {
   font-size: var(--font-size-body);
 }
 
-.step,
+.steps,
 .map,
 .key, footer {
   width: 90%;
@@ -88,6 +88,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 200vh;
+    overflow: hidden;
 }
 
 /* navbar */
@@ -383,7 +384,7 @@ body {
 }
 
 .key .description {
-  width: 60%;
+  width: 55%;
   margin: 20px auto;
   font-weight: 800;
   text-align: center;
@@ -391,48 +392,83 @@ body {
 }
 
 .video-wrapper {
-  width: 70%;
-  margin: auto;
+  width: 80%;
+  margin: 60px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   overflow: hidden;
   height: 450px;
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.custom-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playPauseBtn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#playPauseBtn .play-icon {
+    height: 60px;
+    line-height: 59px;
+    
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+  #playPauseBtn {
+    display: block; /* only show on desktop */
+  }
+}
+
 
 
 /* end key section */
 
 /* option section */
 
-.option-content {
-  display: flex;
-  column-gap: 25px;
-  padding: 10px 20px;
+/* .option-content {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 300px;
+  justify-content: stretch;
+  animation: animate 10s linear infinite;
 }
 
-.option-image {
-  width: 290px;
-    position: relative;
-    top: 49px;
-    left: 25%;
-    
+@keyframes animate {
+  to {
+    translate: calc(-5 * 300px);
+  }
 }
 
-.option-image2 {
+.option-image,
+.option-image2, .option-image3 {
   width: 290px;
+  height: 60px;
     position: relative;
-    top: 57px;
-    left: 40%;
-}
-
-.option-image3 {
-  width: 290px;
-    position: relative;
-    top: 52px;
-    left: 25%;
+    top: 53px;
 }
 
 
@@ -448,19 +484,113 @@ body {
 }
 
 .option1 .text {
-  display: flex
-;
-    /* justify-content: center; */
+  display: flex;
     align-items: center;
     position: relative;
     top: 50px;
-    /* left: 25px; */
     padding-left: 20px;
     column-gap: 15px;
 }
 
 .option .icon {
   width: 30px;
+} */
+
+.option-wrapper {
+  overflow: hidden;
+}
+
+
+.option-content {
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  gap: 20px;
+  justify-content: center;
+  overflow: hidden;
+  animation: animate 10s linear infinite;
+}
+
+.option-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes animate {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.option-content > div {
+  position: relative;
+  width: 400px;
+}
+
+.option-image,
+.option-image2,
+.option-image3 {
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  top: 58px;
+}
+
+.option-image {
+  left: 21%;
+}
+
+.option-image2 {
+  left:38%;
+}
+
+.option-image3 {
+  left: 0;
+}
+
+.option1 {
+  margin-top: 70px;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(360deg, #FFFFFF -0.18%, #E6E6E6 100.25%);
+  color: black;
+}
+
+.option p, .option span {
+  color: #AFAFAF;
+}
+
+.option span {
+  font-weight: 700;
+}
+
+.option1 .text {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 18px;
+  column-gap: 15px;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.option .icon {
+  width: 30px;
+}
+
+swiper-container {
+  width: 80%;
+  margin: 80px auto;
+  height: 100%;
+  position: relative;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -490,6 +620,10 @@ footer .main-content {
 
 footer .branding {
   max-width: 400px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 footer .navbar-brand {

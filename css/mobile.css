@@ -149,6 +149,10 @@
       row-gap: 50px;
   }
 
+  footer .branding {
+        height: auto;
+    }
+
   footer .content {
     width: 100%;
     flex-direction: column !important;

@@ -1,5 +1,6 @@
 AOS.init({
         duration: 1500,
+        once: false,
     });
 
   const navLinks = document.querySelectorAll('.nav-link');
@@ -18,4 +19,45 @@ AOS.init({
     });
   });
 
-  
+  const video = document.getElementById("hikingVideo");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const playIcon = document.querySelector("#playPauseBtn .play-icon");
+const controls = document.getElementById("customControls");
+
+function setVideoBehavior() {
+  const isMobile = window.matchMedia("(max-width: 810px)").matches;
+
+  if (isMobile) {
+    video.setAttribute("autoplay", true);
+    video.setAttribute("muted", true);
+    video.setAttribute("playsinline", true);
+    video.play();
+    controls.style.display = "none";
+  } else {
+    video.removeAttribute("autoplay");
+    controls.style.display = "flex";
+    video.pause();
+    playIcon.textContent = "▶";
+  }
+}
+
+// Initial setup
+setVideoBehavior();
+
+// Handle play/pause button click
+playPauseBtn.addEventListener("click", () => {
+  if (video.paused) {
+    video.muted = false;
+    video.play();
+    playIcon.textContent = "⏸";
+  } else {
+    video.pause();
+    playIcon.textContent = "▶";
+  }
+});
+
+// Listen for screen resize
+window.addEventListener("resize", () => {
+  setVideoBehavior();
+});
+
