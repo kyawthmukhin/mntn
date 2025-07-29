@@ -1,0 +1,109 @@
+@media screen and (min-width: 320px) and (max-width: 810px) {
+  .nav-menu {
+    display: none;
+  }
+
+  #header {
+    background: url('/images/mountain.png');
+    height: 130vh;
+    background-repeat: no-repeat;
+  }
+
+  /* social-media section */
+
+  .social-media {
+    display: none;
+  }
+
+  /* vertical-nav section */
+
+  .vertical-nav {
+    display: none;
+  }
+
+  /* hero-section */
+
+  .hero-section .content {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .hero-section .title {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  /* end hero-section */
+
+  /* steps */
+
+
+  .steps #section1 {
+        flex-direction: column-reverse;
+    }
+
+    .steps #section2 {
+        flex-direction: column;
+    }
+
+    .steps #section1,
+    .steps #section2 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .steps .thumb {
+      width: 100%;
+      text-align: center;
+    }
+
+    .steps .thumb img {
+      height: 450px;
+    }
+
+    .steps .number {
+        position: relative;
+        left: 0;
+        top: 155px;
+        font-size: 200px;
+    }
+
+    .steps .content {
+        left: 20px;
+        right: 20px;
+        width: 100%;
+        height: auto !important;
+    }
+
+    .steps #section1 .content {
+        bottom: 158px !important;
+    }
+
+    .steps #section2 .content {
+        bottom: 190px;
+    }
+
+    .steps .title {
+      font-size: 50px;
+    }
+
+    .steps .description {
+      padding-right: 30px;
+    }
+
+  /* end steps section */
+
+  footer .main-content {
+      flex-direction: column-reverse !important;
+      row-gap: 50px;
+  }
+
+  footer .content {
+    width: 100%;
+    flex-direction: column !important;
+    row-gap: 50px;
+  }
+
+
+
+}

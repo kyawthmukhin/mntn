@@ -1,0 +1,53 @@
+@media screen and (min-width: 810px) and (max-width: 1200px) {
+
+    /* steps */
+
+    .steps #section1 {
+        flex-direction: column-reverse;
+    }
+
+    .steps #section2 {
+        flex-direction: column;
+    }
+
+    .steps #section1,
+    .steps #section2 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .steps .number {
+        position: relative;
+        left: 113px;
+        bottom: 73px;
+    }
+
+    .steps .content {
+        left: 280px;
+        width: 50%;
+    }
+
+    .steps #section1 .content {
+        bottom: 158px !important;
+    }
+
+    .steps #section2 .content {
+        bottom: 190px;
+    }
+
+
+
+
+    /* end step section */
+
+    footer .main-content {
+        flex-direction: column-reverse !important;
+        row-gap: 50px;
+    }
+
+    footer .content {
+        width: 100%;
+        justify-content: flex-start;
+        column-gap: 120px;
+    }
+}
