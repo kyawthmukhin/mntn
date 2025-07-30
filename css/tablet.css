@@ -1,5 +1,16 @@
 @media screen and (min-width: 810px) and (max-width: 1200px) {
 
+    /* social-media section */
+    .social-media {
+        display: none;
+    }
+
+    /* vertical-nav section */
+
+    .vertical-nav {
+        display: none;
+    }
+
     /* steps */
 
     .steps #section1 {
@@ -90,6 +101,12 @@
 
 
     /* footer section */
+
+
+    footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     footer .main-content {
         flex-direction: column-reverse !important;

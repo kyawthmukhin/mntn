@@ -1,7 +1,7 @@
 AOS.init({
-        duration: 1500,
-        once: false,
-    });
+    once: false, 
+    mirror: true,        
+  });
 
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -60,4 +60,18 @@ playPauseBtn.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   setVideoBehavior();
 });
+
+// image slider in option
+
+const optionWrapper = document.querySelector('.option-content');
+const options = optionWrapper.querySelectorAll('div');
+
+optionWrapper.addEventListener('mouseenter', () => {
+  options.forEach(el => el.classList.add('paused'));
+});
+
+optionWrapper.addEventListener('mouseleave', () => {
+  options.forEach(el => el.classList.remove('paused'));
+});
+
 

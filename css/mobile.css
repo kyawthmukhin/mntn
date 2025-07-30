@@ -5,7 +5,7 @@
 
   #header {
     background: url('/images/mountain.png');
-    height: 130vh;
+    height: 100vh;
     background-repeat: no-repeat;
   }
 
@@ -64,14 +64,19 @@
     .steps .number {
         position: relative;
         left: 0;
-        top: 155px;
+        top: 200px;
         font-size: 200px;
+    }
+
+    .steps .number2 {
+      top: 200px;
     }
 
     .steps .content {
         left: 20px;
         right: 20px;
-        width: 100%;
+        width: 90%;
+        margin: 0 20px 0 0;
         height: auto !important;
     }
 
@@ -81,6 +86,7 @@
 
     .steps #section2 .content {
         bottom: 50px;
+        margin-top: -86px;
     }
 
     .steps .title {
@@ -88,7 +94,7 @@
     }
 
     .steps .description {
-      padding-right: 30px;
+      padding-right: 0;
     }
 
   /* end steps section */
@@ -134,15 +140,27 @@
 
   /* key section */
 
+  .key .description {
+    width: 85%;
+  }
+
   .video-wrapper {
     width: 90%;
     height: 350px !important;
+    margin-top: 0;
   }
 
   /* end key section */
 
 
   /* end map section */
+
+  /* footer */
+
+footer {
+    padding-left: 0;
+    padding-right: 0;
+}
 
   footer .main-content {
       flex-direction: column-reverse !important;

@@ -207,14 +207,18 @@ body {
   border-right: 2px solid #fff;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 30px;
 } 
 
 .vertical-nav .nav-link {
+  width: 100px;
   font-weight: 800;
+  border-right: 3px solid black;
+  background: red;
+  display: inline-block;
+  padding-bottom: 50px;
+  margin-right: -1px;
 }
 
 /* steps */
@@ -290,6 +294,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   position: relative;
 }
 
@@ -497,42 +502,62 @@ body {
 } */
 
 .option-wrapper {
+  width: 100%;
   overflow: hidden;
 }
-
 
 .option-content {
-  width: max-content;
   display: grid;
-  grid-template-columns: repeat(3, 400px);
-  gap: 20px;
-  justify-content: center;
-  overflow: hidden;
-  animation: animate 10s linear infinite;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  position: relative;
+  margin-top: 50px;
+  align-items: center;
+  padding: 60px;
 }
 
-.option-content:hover {
-  animation-play-state: paused;
-}
-
-@keyframes animate {
-  100% {
-    transform: translateX(-50%);
-  }
+@keyframes moveLeft {
+    100% {
+        left: -22%;
+    }
 }
 
 .option-content > div {
-  position: relative;
   width: 400px;
+  height: 200px;
+  position: absolute;
+  left: max(calc(400px * 3), 100%);
+  animation-name: moveLeft;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+
+.option-content > div.paused {
+  animation-play-state: paused;
+}
+
+
+.option-content1 {
+    animation-delay: calc(20s / 3 * (3 - 1) * -1);
+}
+
+.option-content2 {
+    animation-delay: calc(20s / 3 * (3 - 2) * -1);
+}
+
+.option-content3 {
+    animation-delay: calc(20s / 3 * (3 - 3) * -1);
+}
+
 
 .option-image,
 .option-image2,
 .option-image3 {
   width: 250px;
   height: 60px;
-  position: absolute;
-  top: 58px;
+  position: relative;
+  top: 52px;
 }
 
 .option-image {
@@ -548,7 +573,6 @@ body {
 }
 
 .option1 {
-  margin-top: 70px;
   width: 100%;
   height: 100px;
   background: linear-gradient(360deg, #FFFFFF -0.18%, #E6E6E6 100.25%);
@@ -566,8 +590,8 @@ body {
 .option1 .text {
   display: flex;
   align-items: center;
-  padding-left: 20px;
-  padding-top: 18px;
+  padding-left: 30px;
+  padding-top: 14px;
   column-gap: 15px;
   height: 100%;
   text-transform: uppercase;
