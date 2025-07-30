@@ -87,8 +87,14 @@ body {
     background: url('/images/hero-section.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
     height: 190vh;
     overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+#header.move-up {
+    background-position: center -100px; 
 }
 
 /* navbar */
@@ -195,6 +201,28 @@ body {
   font-family: var(--font-primary);
   padding: 15px 0;
   line-height: 100px;
+}
+
+.hero-section .scroll-down {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px); /* move down slightly */
+  }
+  100% {
+    transform: translateY(0); /* back to original */
+  }
+}
+
+.arrow-animate {
+  animation: floatUpDown 1.5s ease-in-out infinite;
 }
 
 .vertical-nav {

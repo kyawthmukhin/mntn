@@ -12,6 +12,12 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+window.addEventListener('load', () => {
+  document.getElementById('header').classList.add('move-up');
+});
+
+
 const snowContainer = document.querySelector('.snow-container');
 
 function createSnowflake() {
@@ -89,6 +95,24 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach(section => observer.observe(section));
+
+const wrappers = document.querySelectorAll('.step-wrapper');
+const maxWidth = 200;
+const minWidth = 72;
+
+window.addEventListener('scroll', () => {
+    wrappers.forEach(wrapper => {
+        const line = wrapper.querySelector('.line');
+        const rect = wrapper.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight && rect.bottom > 0) {
+            const visibleRatio = 1 - rect.top / windowHeight; 
+            const newWidth = 10 + (maxWidth - minWidth) * Math.min(Math.max(visibleRatio, 0), 1);
+            line.style.width = `${newWidth}px`;
+        }
+    });
+});
 
 // image slider rotation
 
