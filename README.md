@@ -1,7 +1,9 @@
 📘 MNTN - Hiking Website
+
 A modern, responsive hiking-themed landing page built with HTML, CSS, and JavaScript, featuring animations, interactive sections, and an auto-rotating image slider. This project demonstrates strong frontend development skills, user experience design, and visual storytelling.
 
 🚀 Features
+
 🎬 Animated Hero Section with scroll-triggered effects via AOS.js
 
 🧭 Vertical Navigation that highlights the current section while scrolling
@@ -20,6 +22,7 @@ A modern, responsive hiking-themed landing page built with HTML, CSS, and JavaSc
 
 
 🔧 Installation & Usage
+
 Clone or Download this repository
 
 Ensure your folder structure includes:
@@ -40,6 +43,7 @@ Swiper.js for responsive sliders
 
 
 📱 Responsiveness
+
 Optimized for desktop, tablet, and mobile screens using separate CSS files
 
 Scroll and animation behaviors adapt to device dimensions
@@ -50,6 +54,7 @@ Desktop: Manual play/pause via custom circular button
 Mobile: Autoplays muted and hides controls for distraction-free UX
 
 ❄️ Snowfall Animation
+
 Lightweight DOM-based snowflake generation
 
 Each flake is randomly sized, drifted, and removed post-animation
