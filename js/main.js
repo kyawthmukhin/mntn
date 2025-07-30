@@ -1,25 +1,140 @@
 AOS.init({
     once: false, 
     mirror: true,        
+});
+
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  spaceBetween: 20,
+  navigation: {
+      nextEl: ".custom-next",
+      prevEl: ".custom-prev",
+  },
+});
+
+const snowContainer = document.querySelector('.snow-container');
+
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+
+  // Random starting X position
+  snowflake.style.left = Math.random() * window.innerWidth + 'px';
+
+  // Random drift to right: between 30px and 100px
+  const drift = 30 + Math.random() * 70;
+  snowflake.style.setProperty('--driftX', `${drift}px`);
+
+  // Random fall duration between 5–10 seconds
+  const duration = 5 + Math.random() * 5;
+  snowflake.style.animationDuration = duration + 's';
+
+  // Random size (2–6px)
+  const size = 2 + Math.random() * 4;
+  snowflake.style.width = snowflake.style.height = size + 'px';
+
+  // Add to container
+  snowContainer.appendChild(snowflake);
+
+  // Remove after it finishes falling
+  setTimeout(() => {
+    snowflake.remove();
+  }, duration * 1000);
+}
+
+// Generate snowflakes
+setInterval(createSnowflake, 150);
+
+
+const navLinks = document.querySelectorAll('.vertical-nav .nav-link');
+let sections = document.querySelectorAll('.start-section,.first-section,.second-section,.third-section,.fourth-section,.last-section');
+
+const OFFSET = 180;
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const scrollPosition = targetPosition - OFFSET;
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
   });
+});
 
-  const navLinks = document.querySelectorAll('.nav-link');
 
-  // Smooth scroll (optional if not using `scroll-behavior`)
-  navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-
-      // Set active class
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
+// Scroll observer
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active-nav-link'));
+        const id = entry.target.getAttribute('id');
+        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active-nav-link');
+        }
+      }
     });
-  });
+  },
+  {
+    threshold: 0.6
+  }
+);
 
-  const video = document.getElementById("hikingVideo");
+sections.forEach(section => observer.observe(section));
+
+// image slider rotation
+
+const images = document.querySelectorAll(".image-slider .image");
+const slider = document.getElementById("carousel");
+
+let index = 0;
+let intervalId;
+
+
+//   Updates class names for all images to apply 
+//  the correct visual positions (active, left, back, right).
+  
+const updateClasses = () => {
+    const total = images.length;
+    images.forEach(img => img.className = "image");
+
+    images[index % total].classList.add("active");
+    images[(index - 1 + total) % total].classList.add("left");
+    images[(index - 2 + total) % total].classList.add("back");
+    images[(index - 3 + total) % total].classList.add("right");
+};
+
+
+// Starts the automatic image carousel with a 3-second interval.
+// Updates the index and reassigns classes accordingly.
+
+const startCarousel = () => {
+    intervalId = setInterval(() => {
+        index = (index - 1 + images.length) % images.length;
+        updateClasses();
+    }, 3000);
+};
+
+const stopCarousel = () => clearInterval(intervalId);
+
+updateClasses();
+startCarousel();
+
+slider.addEventListener("mouseenter", stopCarousel);
+slider.addEventListener("mouseleave", startCarousel);
+
+
+// video
+
+const video = document.getElementById("hikingVideo");
 const playPauseBtn = document.getElementById("playPauseBtn");
 const playIcon = document.querySelector("#playPauseBtn .play-icon");
 const controls = document.getElementById("customControls");
@@ -73,5 +188,7 @@ optionWrapper.addEventListener('mouseenter', () => {
 optionWrapper.addEventListener('mouseleave', () => {
   options.forEach(el => el.classList.remove('paused'));
 });
+
+
 
 

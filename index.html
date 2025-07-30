@@ -6,7 +6,11 @@
     <meta name="author" content="MNTN">
     <meta name="description" content="Be prepared for the Mountains and beyond!">
     <title>MNTN</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Logo.svg" type="image/x-icon">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/tablet.css">
@@ -19,7 +23,7 @@
 </head>
 <body>
     <header id="header">
-        <nav class="navbar-nav" data-aos="fade-down" data-aos-duration="2000">
+        <nav class="navbar-nav start-section" data-aos="fade-down" data-aos-duration="2000" id="start">
             <a href="/" class="navbar-brand">
                 MNTN
             </a>
@@ -37,19 +41,21 @@
         </nav>
         <div class="hero-section-wrapper">
             <section class="hero-section">
-                <aside class="social-media">
+                <aside class="social-media" data-aos="fade-right" data-aos-duration="1300">
                     <span>Follow us</span>
                     <img src="/images/instagram.png" alt="instagram logo">
                     <img src="/images/twitter.png" alt="twitter logo">
                 </aside>
                 <div data-aos="fade-right" data-aos-duration="900">
                     <div class="content">
-                        <span class="line"></span>
-                        <span class="guide">A Hiking guide</span>
+                        <div data-aos="fade-right" data-aos-duration="1000">
+                            <span class="line"></span>
+                            <span class="guide">A Hiking guide</span>
+                        </div>
                         <h1 class="title">Be Prepared For The Mountains And Beyond!</h1>
                         <span>scroll down
                             <img src="/images/arrow-downward.png" alt="arrow-downward">
-                        </p>
+                        </span>
                     </div>
                 </div>
                 <div class="vertical-nav" data-aos="fade-left" data-aos-duration="1300">
@@ -64,16 +70,13 @@
                 </div>
             </section>
         </div>
-
-
-
+        <div class="snow-container"></div>
     </header>
 
-  
     <main>
         <div class="steps">
-            <section id="section1">
-                <div>
+            <section id="section1" class="first-section">
+                <section>
                     <div>
                         <h1 class="number">01</h1>
                     </div>
@@ -87,22 +90,22 @@
                                 All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? 
                             </p>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="900">
+                        <div data-aos="fade-up">
                             <a href="#">read more
                                 <img src="images/arrow-right.png" alt="">
                             </a>
                         </div>
                     </div>
-                </div>
+                </section>
                 <div data-aos="fade-up-left" class="thumb">
                     <img src="images/01.png" alt="hiker">
                 </div>
             </section>
-            <section id="section2">
+            <section id="section2" class="second-section">
                 <div data-aos="fade-up-right" class="thumb">
                     <img src="images/01.png" alt="hiker">
                 </div>
-                <div>
+                <section>
                     <div>
                         <h1 class="number number2">02</h1>
                     </div>
@@ -116,29 +119,29 @@
                                 Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.
                             </p>
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="900">
+                        <div data-aos="fade-up">
                             <a href="#">read more
                                 <img src="images/arrow-right.png" alt="">
                             </a>
                         </div>
                     </div>
-                </div>
+                </section>
                 
             </section>
         </div>
-        <div class="map" id="section3">
+        <div class="map third-section" id="section3">
             <h2 class="title">Understand Your Map & Timing</h2>
             <div class="wrapper">
-                <div class="image-container">
-                    <img src="images/01.png" alt="01">
-                    <img src="images/02.png" alt="02">
-                    <img src="images/compass.png" alt="compass">
-                    <img src="images/River.png" alt="river">
+                <div class="image-slider" id="carousel">
+                    <img src="images/01.png" alt="Image 1" class="image active" />
+                    <img src="images/02.png" alt="Image 2" class="image left" />
+                    <img src="images/compass.png" alt="Image 3" class="image right" />
+                    <img src="images/River.png" alt="Image 4" class="image back" />
                 </div>
             </div>
 
         </div>
-        <div class="key" id="section4">
+        <div class="key fourth-section" id="section4">
             <h2 class="title">where you go is the key</h2>
             <p class="description">
                 To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, 
@@ -160,56 +163,84 @@
             </div>
         </div>
 
-        <div class="option" id="section5">
+        <div class="option last-section" id="section5">
             <h2 class="title">Options</h2>
+            
+            <div>
                 <div class="option-wrapper">
-                    <div class="option-content">
-                        <div class="option-content1">
-                            <img src="images/first-option.png" alt="first-option" class="option-image">
-                            <div class="option1">
-                                <div class="text">
-                                    <img src="images/target.png" alt="target" class="icon">
-                                    <p><span>First</span> Option</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="option-content2">
-                            <img src="images/second-option.png" alt="second-option" class="option-image2">
-                            <div class="option1">
-                                <div class="text">
-                                    <img src="images/@sign.png" alt="" class="icon">
-                                    <p><span>Second</span> Option</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="option-content3">
-                            <img src="images/third-option.png" alt="third-option" class="option-image3">
-                            <div class="option1">
-                                <div class="text">
-                                    <img src="images/third.png" alt="target" class="icon">
-                                    <p><span>Third</span> Option</p>
-                                </div>
-                            </div>
+                <div class="option-content">
+                <div class="option-content1">
+                    <img src="images/first-option.png" alt="first-option" class="option-image">
+                    <div class="option1">
+                        <div class="text">
+                            <img src="images/target.png" alt="target" class="icon">
+                            <p><span>First</span> Option</p>
                         </div>
                     </div>
-        </div>
-
-
-        <div>
-                <swiper-container class="mySwiper" keyboard="true" space-between="30" pagination="true" pagination-clickable="true"
-                    navigation="true">
-                    <swiper-slide>Slide 1</swiper-slide>
-                    <swiper-slide>Slide 2</swiper-slide>
-                    <swiper-slide>Slide 3</swiper-slide>
-                    <div class="">
-                        <img src="images/Left Button.svg" alt="previous btn">
+                    <div class="triangle"></div>
+                </div>
+                <div class="option-content2">
+                    <img src="images/second-option.png" alt="second-option" class="option-image2">
+                    <div class="option1">
+                        <div class="text">
+                            <img src="images/@sign.png" alt="" class="icon">
+                            <p><span>Second</span> Option</p>
+                        </div>
                     </div>
-                    <div class="">
-                        <img src="images/Right Button.svg" alt="next btn">
-
+                </div>
+                <div class="option-content3">
+                    <img src="images/third-option.png" alt="third-option" class="option-image3">
+                    <div class="option1">
+                        <div class="text">
+                            <img src="images/third-option-icon.svg" alt="achivement icon" class="icon">
+                            <p><span>Third</span> Option</p>
+                        </div>
                     </div>
-                </swiper-container>
+                </div>
             </div>
+            </div>
+
+            <!-- Swiper HTML -->
+            <div class="option-carousel-container">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-content-container">
+                                <div class="swiper-content">
+                                    <img src="images/first-option (2).png" alt="target" class="icon">
+                                    <p class="option-text1"><span class="first">First</span> Option</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-content-container">
+                                <div class="swiper-content">
+                                    <img src="images/purple@sign.png" alt="" class="icon2">
+                                    <p class="option-text2"><span class="second">Second</span> Option</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-content-container">
+                                <div class="swiper-content">
+                                    <img src="images/achivement-svgrepo-com (2).svg" alt="achivement icon" class="icon3">
+                                    <p class="option-text3"><span class="third">Third</span> Option</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Custom Navigation Buttons -->
+                <div class="custom-prev">
+                    <img src="images/Left Button.svg" alt="Previous Button">
+                </div>
+                <div class="custom-next">
+                    <img src="images/Right Button.svg" alt="Next Button">
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
@@ -253,7 +284,7 @@
     </footer>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
 </body>

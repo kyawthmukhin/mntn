@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
   }
 
+
   /* social-media section */
 
   .social-media {
@@ -23,19 +24,30 @@
 
   /* hero-section */
 
+  .hero-section-wrapper {
+    width: 96%;
+    margin: 50% auto 50% auto;
+    transform: translateY(-60%);
+  }
+
   .hero-section .content {
     width: 90%;
-    margin: 100px auto;
+    margin: 120px auto 20px auto;
   }
 
   .hero-section .title {
-    font-size: 38px;
+    font-size: 58px;
     line-height: 40px;
   }
 
   /* end hero-section */
 
   /* steps */
+
+  .steps {
+        row-gap: 0;
+        bottom: 0;
+    }
 
 
   .steps #section1 {
@@ -105,55 +117,107 @@
     padding-bottom: 0;
   }
 
-  .map .title,
-  .key .title, 
-  .option .title {
-    font-size: 40px;
-  }
+.map .title,
+.key .title, 
+.option .title {
+  font-size: 40px;
+}
 
-  .map .wrapper {
-    height: 80vh;
-    margin-bottom: 0;
-  }
+.map .image-slider {
+    height: 350px;
+}
 
-  .map .image-container {
-    margin-top: 70px;
-  }
+.map .image {
+    height: 180px;
+}
 
-  .map .image-container img {
-    width: 230px;
-    height: 280px;
-  }
+.map .active {
+    width: 180px;
+    height: 220px;
+    top: 65%;
+    transform: translate(-50%, -65%) scale(1);
+}
 
-  .map .image-container img:nth-child(1) {
-    transform: rotateY(0deg) translateZ(150px) translateY(100px);
-  }
-  .map .image-container img:nth-child(2) {
-    transform: rotateY(90deg) translateZ(150px);
-  }
-  .map .image-container img:nth-child(3) {
-    transform: rotateY(180deg) translateZ(150px) translateY(100px);
-  }
-  .map .image-container img:nth-child(4) {
-    transform: rotateY(270deg) translateZ(150px);
-  }
+.map .left,
+.map .right {
+  width: 140px;
+  height: 180px;
+  top: 30%;
+  transform: translateY(-30%) scale(0.95);
+}
+
+.map .back {
+    width: 120px;
+    height: 150px;
+    top: 0;
+    transform: translateX(-50%) scale(0.85);
+}
+
 
   /* key section */
 
+  .key,.option {
+    padding-bottom: 30px;
+  }
+
   .key .description {
     width: 85%;
+    margin-bottom: 0;
   }
 
   .video-wrapper {
     width: 90%;
     height: 350px !important;
-    margin-top: 0;
+    margin: 0 auto !important;
   }
 
-  /* end key section */
+  .video-wrapper video {
+    margin: 20px auto 0 auto;
+  }
+
+  /* option section */
+
+  .option-content {
+    margin-bottom: 50px;
+  }
+
+  .option-wrapper {
+    padding-bottom: 0;
+  }
+
+   .custom-prev { 
+      left: -20%;
+  } 
+    
+  .custom-next {
+      right: -20%;
+  }
+
+  .custom-prev img,
+  .custom-next img {
+    height: 45px;
+  }
+
+  .swiper-content-container {
+      height: 300px;
+  }
+
+  .swiper-content {
+    column-gap: 5px;
+  }
+
+  .swiper-content p {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .swiper-content .icon2,
+  .swiper-content .icon3 {
+    width: 30px;
+  }
 
 
-  /* end map section */
+
 
   /* footer */
 

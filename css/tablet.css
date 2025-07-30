@@ -1,5 +1,13 @@
 @media screen and (min-width: 810px) and (max-width: 1200px) {
 
+    #header {
+        height: 150vh;
+    }
+
+    .hero-section {
+        margin: 200px auto;
+    }
+
     /* social-media section */
     .social-media {
         display: none;
@@ -13,6 +21,11 @@
 
     /* steps */
 
+    .steps {
+        row-gap: 0;
+        bottom: 0;
+    }
+
     .steps #section1 {
         flex-direction: column-reverse;
     }
@@ -25,6 +38,12 @@
     .steps #section2 {
         justify-content: center;
         align-items: center;
+    }
+
+    #section1 .thumb img,
+    #section2 .thumb img {
+        width: 430px;
+        height: 500px;
     }
 
     .steps .number {
@@ -52,7 +71,7 @@
      /* map section */
 
     .map {
-        padding-bottom: 250px;
+        padding-bottom: 70px;
     }
 
     .map .title,
@@ -62,7 +81,7 @@
     }
 
     .map .wrapper {
-        height: 100vh;
+        height: auto;
         margin-bottom: 0;
     }
 
@@ -97,7 +116,19 @@
         height: 400px;
     }
 
-  /* end key section */
+    /* option */
+    .custom-prev {
+        left: -20%;
+    }
+
+    .custom-next {
+        right: -20%;
+    }
+
+    .swiper-content p {
+        text-transform: uppercase;
+        font-size: 30px;
+        }
 
 
     /* footer section */
@@ -122,4 +153,5 @@
         justify-content: flex-start;
         column-gap: 120px;
     }
+
 }
