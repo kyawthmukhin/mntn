@@ -5,7 +5,11 @@
     }
 
     .hero-section {
-        margin: 200px auto;
+        margin: 80px auto 50px auto;
+    }
+
+    .hero-section .title {
+        font-size: 68px;
     }
 
     /* social-media section */

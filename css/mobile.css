@@ -5,7 +5,7 @@
 
   #header {
     background: url('../images/mountain.png');
-    height: 100vh;
+    height: 190vh;
     background-repeat: no-repeat;
   }
 
@@ -32,12 +32,12 @@
 
   .hero-section .content {
     width: 90%;
-    margin: 120px auto 20px auto;
+    margin: 220px auto 20px auto;
   }
 
   .hero-section .title {
-    font-size: 58px;
-    line-height: 40px;
+    font-size: 52px;
+    line-height: 50px;
   }
 
   /* end hero-section */
