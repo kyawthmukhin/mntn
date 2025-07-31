@@ -4,9 +4,10 @@
   }
 
   #header {
-    background: url('../images/mountain.png');
-    height: 190vh;
-    background-repeat: no-repeat;
+    background: 
+    linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 90.38%),
+    url('../images/mountain.png');
+    height: 130vh !important;
   }
 
 
@@ -24,20 +25,29 @@
 
   /* hero-section */
 
+
   .hero-section-wrapper {
     width: 96%;
-    margin: 50% auto 50% auto;
-    transform: translateY(-60%);
+    margin: 0 auto;
+  }
+
+  .hero-section {
+      margin: 120px 15px 0;
   }
 
   .hero-section .content {
     width: 90%;
-    margin: 220px auto 20px auto;
+    margin: 20px auto;
   }
 
   .hero-section .title {
-    font-size: 52px;
+    font-size: 44px;
     line-height: 50px;
+  }
+
+  .hero-section .guide {
+    font-weight: 700;
+    letter-spacing: 4px;
   }
 
   /* end hero-section */

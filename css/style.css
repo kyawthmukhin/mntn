@@ -84,24 +84,31 @@ body {
 
 #header {
     width: 100%;
+    margin-top: -30px;
     background: url('../images/hero-section.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     height: 190vh;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    animation: moveHeader 1s ease-in-out forwards;
 }
 
-#header.move-up {
-    background-position: center -100px; 
+@keyframes moveHeader {
+  0% {
+    background-position: center 30px;
+  }
+  100% {
+    background-position: center 0px;
+  }
 }
+
 
 /* navbar */
 
 .navbar-nav {
   width: 95%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;

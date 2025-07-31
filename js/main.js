@@ -13,10 +13,6 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 
-window.addEventListener('load', () => {
-  document.getElementById('header').classList.add('move-up');
-});
-
 
 const snowContainer = document.querySelector('.snow-container');
 
